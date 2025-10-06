@@ -154,6 +154,7 @@
 
     .card {
       background-color: var(--card-bg);
+      border-left: 6px solid #d96e22;
       padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 4px 10px var(--card-shadow);
@@ -205,40 +206,74 @@
       font-size: 0.9rem;
     }
     .hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1rem;
-}
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
 
-.badge {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-weight: 600;
-  color: #fff;
-  transition: transform 0.3s;
-  text-decoration: none;
-}
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #fff;
+    transition: transform 0.3s;
+    text-decoration: none;
+  }
 
-.badge img {
-  width: 20px;
-  height: 20px;
-}
+  .badge img {
+    width: 20px;
+    height: 20px;
+  }
 
-.badge:hover {
-  transform: scale(1.05);
-}
+  .badge:hover {
+    transform: scale(1.05);
+  }
 
-.badge.linkedin {
-  background-color: #0A66C2;
-}
+  .badge.linkedin {
+    background-color: #0A66C2;
+  }
 
-.badge.github {
-  background-color: #333;
-}
+  .badge.github {
+    background-color: #333;
+  }
+  #academic-projects {
+    margin-top: 4rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: linear-gradient(135deg, #f0f7ff, #e3e9ff);
+    border-left: 6px solid #4f46e5;
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .project-card h4 {
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .project-card p {
+    color: #333;
+    line-height: 1.5;
+  }
 
 
   </style>
@@ -291,15 +326,76 @@
         <p>Développement et déploiement d’un service web sur Render.</p>
       </div>
       <div class="card">
-        <h4>Projet Cosméto-vigilance - <a href="https://aminataaliouba.github.io/Cosmetovigilence/">Lien</a></h4>
-        <p>Décembre 2024</p>
-        <p>Collecte de données par web scraping. Analyse avec Oracle DBMS, SQL et Python.</p>
-      </div>
-      <div class="card">
         <h4>Stage Vision par Ordinateur, LIMICS</h4>
         <p>Juin-Juillet 2024</p>
         <p>Analyse d’images de capillaroscopie pour la détection automatisée du phénomène de Raynaud. Fine-tuning de CNN et obtention de performances SOTA.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="academic-projects" class="container">
+    <h3>📘 Projets Académiques</h3>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h4>Décembre 2024 - Projet Cosméto-vigilance - <a href="https://aminataaliouba.github.io/Cosmetovigilence/">Lien</a></h4>
+        <p>Collecte de données par web scraping. Analyse avec Oracle DBMS, SQL et Python.</p>
+      </div>
+      <div class="project-card">
+        <h4>Décembre 2024 – Projet de Scaling Multidimensionnel</h4>
+        <p><strong>Objectif :</strong> Application du <em>Multidimensional Scaling (MDS)</em> à la régression par arbres de décision.</p>
+      </div>
+
+      <div class="project-card">
+        <h4>Juillet 2024 – École d’Été : Université de Cagliari, Italie</h4>
+        <p>Programme intensif sur l’<strong>Apprentissage Automatique</strong>, les <strong>LLMs</strong> et les <strong>Graphes de Connaissances</strong>.<br>
+        Projet : <em>Génération Augmentée par Recherche (RAG)</em> sur le jeu de données <strong>Ohsumed</strong> : modèles Llama, documents pertinents et explicabilité.</p>
+      </div>
+
+      <div class="project-card">
+        <h4>Mars 2024 – Projet d’État de l’Art : Machine Learning pour le Diabète</h4>
+        <p>Étude approfondie des applications de l’apprentissage automatique dans le diagnostic et le traitement du diabète: GBR, KNN, KMean, Bayes</p>
+      </div>
+  
+      <div class="project-card">
+        <h4>Décembre 2023 – Projet Comparatif : Modélisation de Sujets</h4>
+        <p>Comparaison de modèles de NLP : <em>NMF</em>, <em>LDA</em> et <em>Top2Vec</em>.</p>
+      </div>
+  
+      <div class="project-card">
+        <h4>Juin 2023 – Projet de Fin d’Études de Licence</h4>
+        <p>Développement d’une application complète de gestion de cave à vin en <strong>Java</strong>.</p>
+      </div>
+  
+      <div class="project-card">
+        <h4>Mai 2023 – Application de Gestion de Monstres</h4>
+        <p>Création d’un jeu interactif en <strong>JavaScript, React</strong> avec interface dynamique.</p>
+      </div>
+  
+      <div class="project-card">
+        <h4>Mai 2023 – Visualisation de Données : Pollution de l’Air</h4>
+        <p>Analyse de la pollution à proximité des écoles et crèches d’Île-de-France (2012–2017) à l’aide de <strong>Python</strong></p>
+      </div>
+  
+      <div class="project-card">
+        <h4>Avril 2023 – Gestionnaire de Fenêtres en Tuiles</h4>
+        <p>Conception et implémentation du gestionnaire en <strong>OCaml</strong>.</p>
+      </div>
+  
+      <div class="project-card">
+        <h4>Décembre 2022 – Gestion des Déplacements Urbains</h4>
+        <p>Développement d’une application <strong>Python + PostgreSQL</strong> pour l’optimisation des trajets urbains.</p>
+      </div>
+  
+      <div class="project-card">
+        <h4>Juin 2022 – Jeu de Dames</h4>
+        <p>Création d’un jeu complet en <strong>Java</strong>.</p>
+      </div>
+  
+      <div class="project-card">
+        <h4>Janvier 2022 – Jeu en C</h4>
+        <p>Programmation d’un jeu utilisant des structures de données avancées (<em>arbres</em>, <em>files</em>, <em>piles</em>).</p>
+      </div>
+  
     </div>
   </section>
 
