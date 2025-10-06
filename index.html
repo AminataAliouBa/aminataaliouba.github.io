@@ -1,97 +1,440 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aminata Aliou BA</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Aminata Aliou BA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1E40AF;
+      --secondary: #F59E0B;
+      --background: #F9FAFB;
+      --text: #1F2937;
+      --card-bg: #ffffff;
+      --card-shadow: rgba(0,0,0,0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      background-color: var(--card-bg);
+      box-shadow: 0 2px 5px var(--card-shadow);
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      color: var(--primary);
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .hero-content {
+      text-align: center;
+    }
+
+    .hero-content h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      color: #4B5563;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-content a.button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--secondary);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .hero-content a.button:hover {
+      background-color: var(--primary);
+    }
+
+    .hero img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 4px solid var(--primary);
+    }
+
+    @media(min-width: 768px) {
+      .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    section h3 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media(min-width: 768px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(min-width: 1024px) {
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px var(--card-shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px var(--card-shadow);
+    }
+
+    .card h4 {
+      color: var(--secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: #4B5563;
+      font-size: 0.95rem;
+    }
+
+    /* Education Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--primary);
+      color: #fff;
+    }
+
+    td {
+      background-color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: #6B7280;
+      font-size: 0.9rem;
+    }
+    .hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+
+.badge img {
+  width: 20px;
+  height: 20px;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+.badge.linkedin {
+  background-color: #0A66C2;
+}
+
+.badge.github {
+  background-color: #333;
+}
+
+
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Experiences and Projects</h1>
-    </header>
 
-    <main>
-        <section>
-            <h2>Recent Experiences</h2>
-            <ul class="timeline">
-                <li>
-                    <h3>July 16-22, 2024</h3>
-                    <p><strong>Summer School in Cagliari, Italy</strong>: Blended Intensive Programme (BIP) on Machine Learning, LLMs, and Knowledge Graphs, University of Cagliari.</p>
-                </li>
-                <li>
-                    <h3>June - July, 2024</h3>
-                    <p><strong>Research Internship in Computer Vision</strong>, LIMICS Laboratory (Images from Capillaroscopy).</p>
-                </li>
-                <li>
-                    <h3>March 2024</h3>
-                    <p><strong>State-of-the-Art Study Project</strong> on the Application of Machine Learning in Diabetes Treatment.</p>
-                </li>
-            </ul>
-        </section>
+  <header class="container">
+    <h1>Aminata Aliou BA</h1>
+    <nav>
+      <a href="#experience">Expériences</a>
+      <a href="#education">Formations</a>
+      <a href="#skills">Compétences</a>
+    </nav>
+  </header>
 
-        <section>
-            <h2>Academic Projects</h2>
-            <ul class="timeline">
-                <li>
-                    <h3>May 2023</h3>
-                    <p><strong>Monster management application project</strong> in JavaScript.</p>
-                </li>
-                <li>
-                    <h3>April 2023</h3>
-                    <p><strong>Tiled window manager design project</strong> in OCaml.</p>
-                </li>
-                <li>
-                    <h3>January 2022</h3>
-                    <p><strong>Game development project</strong> in C (Robosol).</p>
-                </li>
-                <li>
-                    <h3>April 2020</h3>
-                    <p><strong>Captive portal implementation project</strong> with Zeroshell.</p>
-                </li>
-                <li>
-                    <h3>July 2020</h3>
-                    <p><strong>Internet Box (LAN) implementation project</strong>.</p>
-                </li>
-                <li>
-                    <h3>July 2019</h3>
-                    <p><strong>Mini project to create a website</strong> in HTML/CSS.</p>
-                </li>
-                <li>
-                    <h3>December 2023</h3>
-                    <p><strong>Comparative Study Project</strong> on Topic Modeling Algorithms (NMF, LDA, Top2Vec...).</p>
-                </li>
-                <li>
-                    <h3>December 2023</h3>
-                    <p><strong>Data Engineering Project</strong>, One-Way ANOVA, Two-Way ANOVA, MANOVA.</p>
-                </li>
-                <li>
-                    <h3>November 2023</h3>
-                    <p><strong>2D Galaxy Simulation Project</strong>, Simulated a 2D galaxy using the Barnes-Hut algorithm with Python.</p>
-                </li>
-                <li>
-                    <h3>Bachelor's Final Year Project, April-June 2023</h3>
-                    <p><strong>Development of a wine cellar management application</strong> in Java.</p>
-                </li>
-                <li>
-                    <h3>May 2023</h3>
-                    <p><strong>Data visualization project</strong> of air pollution near schools and nurseries in Île-de-France between 2012 and 2017.</p>
-                </li>
-                <li>
-                    <h3>December 2022</h3>
-                    <p><strong>Urban travel management application</strong> with Python and PostgreSQL.</p>
-                </li>
-                <li>
-                    <h3>June 2022</h3>
-                    <p><strong>Checkers game</strong> in Java.</p>
-                </li>
-            </ul>
-        </section>
-    </main>
+  <section class="hero container">
+    <div class="hero-content">
+      <h2>Data Scientist</h2>
+      <p>Jeune Diplômée en Master Exploration informatique des données et décisionnel,
+      <br>Université Sorbonne Paris Nord, Institut Galilée,
+      <br>Paris, Île-de-France, France</p>
+      <div class="hero-buttons">
+        <a href="https://linkedin.com/in/aminata-a-ba-936553173" target="_blank" class="badge linkedin">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />
+          LinkedIn
+        </a>
+        <a href="https://github.com/AminataAliouBa" target="_blank" class="badge github">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" />
+          GitHub
+        </a>
+      </div>
+      
+    </div>
+    <img src="profile.jpg" alt="Photo de profil">
+  </section>
 
-    <footer>
-        <p>© 2024 - AAB</p>
-    </footer>
-</body>
-</html>
+  <!-- Expériences -->
+  <section id="experience" class="container">
+    <h3>💼 Expériences Professionnelles</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Stage Data - GRDF, Paris</h4>
+        <p>Avril 2025 – Septembre 2025</p>
+        <p>Conception de workflows de détection d’anomalies sur données industrielles de gaz. Développement de tableaux de bord et scripts de correction.</p>
+        <p><strong>Outils :</strong> Spark, Cassandra, Elasticsearch, Kafka, Superset, Airflow</p>
+      </div>
+      <div class="card">
+        <h4>Yel-Service, Node.js - <a href="https://yelservice.com/">Lien</a></h4>
+        <p>Janvier 2025</p>
+        <p>Développement et déploiement d’un service web sur Render.</p>
+      </div>
+      <div class="card">
+        <h4>Projet Cosméto-vigilance - <a href="https://aminataaliouba.github.io/Cosmetovigilence/">Lien</a></h4>
+        <p>Décembre 2024</p>
+        <p>Collecte de données par web scraping. Analyse avec Oracle DBMS, SQL et Python.</p>
+      </div>
+      <div class="card">
+        <h4>Stage Vision par Ordinateur, LIMICS</h4>
+        <p>Juin-Juillet 2024</p>
+        <p>Analyse d’images de capillaroscopie pour la détection automatisée du phénomène de Raynaud. Fine-tuning de CNN et obtention de performances SOTA.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Formations -->
+  <section id="education" class="container">
+    <h3>🎓 Diplômes & Formations</h3>
+    <table>
+      <tr>
+        <th>Année</th>
+        <th>Diplôme / Formation</th>
+        <th>Détails</th>
+      </tr>
+      <tr>
+        <td>2024–2025</td>
+        <td>Master, Exploration Informatique des données et Décisionnel</td>
+        <td>Cours: Machine Learning, Deep Learning, Big Data, Statistique, Python, R</td>
+      </tr>
+      <tr>
+        <td>2022–2023</td>
+        <td>Licence, Informatique</td>
+        <td>Cours: Probabilité, JAVA, C, Base de Données, Structures de Données Avancées</td>
+      </tr>
+      <tr>
+        <td>2019–2020</td>
+        <td>DEUG, Développement et Administration d’Applications</td>
+        <td>Cours: Probabilité, Statistique, Base de Données, Programmation, Réseaux</td>
+      </tr>
+      <tr>
+        <td>2018</td>
+        <td>Baccalauréat Scientifique</td>
+        <td>Sénégal</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Compétences -->
+  <section id="skills" class="container">
+    <h3>🛠 Compétences Techniques</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Intelligence Artificielle / Machine Learning</h4>
+        <p>CNN, DenseNet, ResNet50, U-Net, YOLOv8, Grad-CAM, Word2Vec, GPT-2, LSTM, RNN</p>
+      </div>
+     
+      <div class="card">
+        <h4>Big Data & Traitement de données</h4>
+        <p>PySpark, Pandas, NumPy, SciPy, Statistiques, Matplotlib, Seaborn, Power BI, Tableau</p>
+      </div>
+      <div class="card">
+        <h4>Pipeline & Orchestration</h4>
+        <p>Apache Airflow, Kafka</p>
+      </div>
+      <div class="card">
+        <h4>Systèmes Distribués & Stockage</h4>
+        <p>Spark, Elasticsearch, Cassandra</p>
+      </div>
+      <div class="card">
+        <h4>Bases de Données</h4>
+        <p>Oracle (PL/SQL), PostgreSQL, MySQL</p>
+      </div>
+      <div class="card">
+        <h4>Algorithmique</h4>
+        <p>Structures : Listes, Piles, Files, Arbres, Graphes, Matrices ; Programmation dynamique, Flots, Arbres couvrants, Complexité, Plus courts chemins</p>
+      </div>
+      <div class="card">
+        <h4>Développement & Frameworks</h4>
+        <p>Python, SQL, Java, C, JavaScript, Shell, R, Matlab, PHP, HTML/CSS, XML, UML, OCaml ; React, JavaFX</p>
+      </div>
+      <div class="card">
+        <h4>Outils & Gestion de projet</h4>
+        <p>GitHub, Anaconda, LaTeX, Microsoft Office, Google Workspace ; Méthodes Agile</p>
+      </div>
+  </section>
+  <!-- Compétences Personnelles -->
+<section id="personal-skills" class="container">
+    <h3>🧠 Compétences Personnelles</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Autonomie</h4>
+        <p>Capacité à travailler de manière indépendante et à gérer des projets.</p>
+      </div>
+      <div class="card">
+        <h4>Esprit d’équipe</h4>
+        <p>Collaboration efficace avec différents profils et dans des environnements variés.</p>
+      </div>
+      <div class="card">
+        <h4>Communication</h4>
+        <p>Transmission claire et concise des idées, rapports et résultats.</p>
+      </div>
+      <div class="card">
+        <h4>Adaptabilité</h4>
+        <p>Capacité à évoluer rapidement face aux changements et aux nouvelles technologies.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Langues -->
+  <section id="languages" class="container">
+    <h3>🌐 Langues</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Anglais</h4>
+        <p>B2 – Communication technique et scientifique</p>
+      </div>
+      <div class="card">
+        <h4>Français</h4>
+        <p>Courant</p>
+      </div>
+      <div class="card">
+        <h4>Poulaar</h4>
+        <p>Langue maternelle</p>
+      </div>
+      <div class="card">
+        <h4>Wolof</h4>
+        <p>Courant</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Centres d’intérêt -->
+  <section id="interests" class="container">
+    <h3>⚡ Centres d’intérêt</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Escalade & Vélo</h4>
+        <p>Pratique sportive régulière favorisant la concentration et la persévérance.</p>
+      </div>
+      <div class="card">
+        <h4>Lecture</h4>
+        <p>Passion pour les ouvrages techniques et scientifiques.</p>
+      </div>
+      <div class="card">
+        <h4>Trading</h4>
+        <p>Analyse et suivi des marchés financiers pour développer la prise de décision.</p>
+      </div>
+    </div>
+  </section>
+  
